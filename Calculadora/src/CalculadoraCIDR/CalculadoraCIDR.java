@@ -1,6 +1,7 @@
 package CalculadoraCIDR;
 
 public class CalculadoraCIDR {
+	/*Prueba*/
 	public static boolean validadorip(String ip) {
 		String ip_completa[] = ip.split("\\.");
 		int byte1, byte2, byte3, byte4;
