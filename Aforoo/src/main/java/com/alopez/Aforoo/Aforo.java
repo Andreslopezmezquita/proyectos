@@ -6,16 +6,15 @@ public class Aforo {
 	public static boolean Entrar(int aforomax, int aforo, int entradas) {
 		aforo += entradas;
 		if (entradas <= 0) {
-			System.out.println("No pueden entrar personas negativas");
+			System.out.println("No pueden entrar personas negativas o inexistentes");
 			return false;
 		} else if (aforo > aforomax) {
 			System.out.println("Lo siento estamos completos");
 			return false;
-		} else if (aforo <= aforomax && aforo > 0) {
-			System.out.println("Bienvenido. Puedes pasar");
+		} else {
+			System.out.println("Bienvenido. Pueden pasar");
 			return true;
 		}
-		return true;
 	}
 
 	public static boolean Salir(int aforomax, int aforo, int salidas) {
@@ -26,21 +25,24 @@ public class Aforo {
 		} else if (aforomax < aforo || aforo < 0) {
 			System.out.println("Es imposible que salgan mas personas de las que habia dentro");
 			return false;
-		} else if (aforo >= 0) {
+		} else {
 			System.out.println("Adios, hasta pronto");
 			return true;
 		}
-		return true;
 	}
 
 	public static int Mostraraforo(int aforo) {
 		return aforo;
 	}
 
-	public static int MostrarAforoMax(int aforomax) {
-
+	public static int MostrarAforoMax(int aforomax, int aforo) {
+		if (aforo > aforomax) {
+			System.out.println("No puedes configurar el aforo maximo en estos momentos porque el aforo es de mayor que tu configuracion");
+			return aforo;
+		}else {
 		return aforomax;
 	}
+}
 
 	public static void menu() {
 		Scanner teclado = new Scanner(System.in);
@@ -49,6 +51,7 @@ public class Aforo {
 		int aforomax = 0;
 		int opcion;
 		while (!salir) {
+			System.out.println("¿Que accion quieres realizar?");
 			System.out.println("1. Meter a una persona");
 			System.out.println("2. Sacar a una persona");
 			System.out.println("3. Aforo actual");
@@ -81,7 +84,7 @@ public class Aforo {
 					break;
 				case 3:
 					System.out.println("El aforo es de " + Mostraraforo(aforo) + " y el aforo maximo es de "
-							+ MostrarAforoMax(aforomax));
+							+ MostrarAforoMax(aforomax, aforo));
 					break;
 				case 4:
 					System.out.println("Dime el aforo maximo que hay en tu local");
@@ -89,7 +92,7 @@ public class Aforo {
 					if (aforomax < 0) {
 						System.out.println("El aforo no puede ser negativo");
 					} else {
-						System.out.println("El aforo maximo ahora es de " + MostrarAforoMax(aforomax));
+						System.out.println("El aforo maximo ahora es de " + MostrarAforoMax(aforomax,aforo));
 					}
 					break;
 				case 5:
