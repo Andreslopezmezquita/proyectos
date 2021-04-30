@@ -22,7 +22,7 @@ public class Aforo {
 		if (salidas <= 0) {
 			System.out.println("Pon numeros positivos aunque sean salidas");
 			return false;
-		} else if (aforomax < aforo || aforo < 0) {
+		} else if ( aforo < 0) {
 			System.out.println("Es imposible que salgan mas personas de las que habia dentro");
 			return false;
 		} else {
@@ -36,6 +36,9 @@ public class Aforo {
 	}
 
 	public static int MostrarAforoMax(int aforomax, int aforo) {
+		if (aforomax < 0) {
+			System.out.println("El aforo no puede ser negativo");
+		} 
 		if (aforo > aforomax) {
 			System.out.println("No puedes configurar el aforo maximo en estos momentos porque el aforo es de mayor que tu configuracion");
 			return aforo;
@@ -89,11 +92,7 @@ public class Aforo {
 				case 4:
 					System.out.println("Dime el aforo maximo que hay en tu local");
 					aforomax = teclado.nextInt();
-					if (aforomax < 0) {
-						System.out.println("El aforo no puede ser negativo");
-					} else {
-						System.out.println("El aforo maximo ahora es de " + MostrarAforoMax(aforomax,aforo));
-					}
+					System.out.println("El aforo maximo ahora es de " + MostrarAforoMax(aforomax,aforo));
 					break;
 				case 5:
 					System.out.println("Ya son las 23:00 hay que cerrar. Hasta mañana");
