@@ -74,7 +74,7 @@ public class Tablero {
 			while (aux) {
 				jugador1();
 				if (this.Fila1 > 3 || this.Columna1 > 3 || this.Fila1 <= 0 || this.Columna1 <= 0) {
-					System.out.println("Has colocado la ficha fuera del tablero");
+					System.out.println("Has colocado la ficha fuera del tablero prueba otra vez");
 					aux = true;
 					continue;
 				}
@@ -95,7 +95,7 @@ public class Tablero {
 			while (!aux) {
 				jugador2();
 				if (this.Fila2 > 3 || this.Columna2 > 3 || this.Fila2 <= 0 || this.Columna2 <= 0) {
-					System.out.println("Has colocado la ficha fuera del tablero");
+					System.out.println("Has colocado la ficha fuera del tablero prueba otra vez");
 					aux = false;
 					continue;
 				}
