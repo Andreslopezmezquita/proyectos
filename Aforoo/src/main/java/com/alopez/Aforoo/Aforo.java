@@ -66,7 +66,7 @@ public class Aforo {
 			} else {
 				switch (opcion) {
 				case 1:
-					System.out.println("Introduce las personas que van a entrar");
+					System.out.println("Introduce las personas que van a entrar porfavor");
 					int entradas = teclado.nextInt();
 					if (Entrar(aforomax, aforo, entradas) == false) {
 
