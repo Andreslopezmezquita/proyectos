@@ -31,7 +31,7 @@ public class TestIp {
 	@Tag("IF")
 	@Test
 	public void claseB() {
-		Ip nuevaIp = new Ip("191.15.14.23", "23");
+		Ip nuevaIp = new Ip("191.15.15.23", "23");
 		nuevaIp.getClase();
 		assertEquals(nuevaIp.getClase(), Ip.CLASE_B);
 
