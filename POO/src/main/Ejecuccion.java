@@ -1,6 +1,6 @@
 package main;
 
-import persona.viajero.viajero;
+import Arraylists.viajero;
 
 public class Ejecuccion {
 
