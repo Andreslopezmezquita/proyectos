@@ -38,7 +38,7 @@ public class Tablero {
 	 }
 	    
 
-	public void menu(String jugada) {
+	public void menu() {
 		boolean salir = false;
 		int opcion;
 		while (!salir) {
@@ -56,7 +56,7 @@ public class Tablero {
 					jugar1vsPc();
 					break;
 				case 3:
-					jugarComandos(jugada);
+					
 					break;
 		
 				case 4:
