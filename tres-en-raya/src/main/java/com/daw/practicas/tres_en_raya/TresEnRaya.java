@@ -1,6 +1,6 @@
 package com.daw.practicas.tres_en_raya;
 
-public class Ejecutar {
+public class TresEnRaya {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
