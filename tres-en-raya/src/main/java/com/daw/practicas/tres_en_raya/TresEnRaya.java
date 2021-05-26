@@ -8,5 +8,7 @@ public class TresEnRaya {
 		Tablero T1 = new Tablero ();
 		
 		T1.menu(jugada);
+
 	}
+	
 }
