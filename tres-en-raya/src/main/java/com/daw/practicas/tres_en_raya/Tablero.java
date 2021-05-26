@@ -38,7 +38,7 @@ public class Tablero {
 	 }
 	    
 
-	public void menu(String jugar) {
+	public void menu(String jugada) {
 		boolean salir = false;
 		int opcion;
 		while (!salir) {
@@ -56,7 +56,7 @@ public class Tablero {
 					jugar1vsPc();
 					break;
 				case 3:
-					jugarComandos(jugar);
+					jugarComandos(jugada);
 					break;
 		
 				case 4:
@@ -178,9 +178,9 @@ public class Tablero {
 		limpiar();
 		System.out.println("Habeis empatado");
 	}
-	private void jugarComandos(String jugadacompleta) {
+	private void jugarComandos(String jugadacomandos) {
 		
-		String jugada[] = jugadacompleta.split(";");
+		String jugada[] = jugadacomandos.split(";");
 		
 		String Jugada1 = jugada[0];
 		String Jugada2 = jugada[1];
@@ -191,6 +191,17 @@ public class Tablero {
 		String Jugada7 = jugada[6];
 		String Jugada8 = jugada[7];
 		String Jugada9 = jugada[8];
+		
+		String jugadaEnt1[] = Jugada1.split(",");
+		String jugadaEnt2[] = Jugada1.split(",");
+		String jugadaEnt3[] = Jugada1.split(",");
+		String jugadaEnt4[] = Jugada1.split(",");
+		String jugadaEnt5[] = Jugada1.split(",");
+		String jugadaEnt6[] = Jugada1.split(",");
+		String jugadaEnt7[] = Jugada1.split(",");
+		String jugadaEnt8[] = Jugada1.split(",");
+		String jugadaEnt9[] = Jugada1.split(",");
+		
 		
 		
 	}
